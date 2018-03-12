@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44078F1A-3B0F-4806-9A8B-71C34D252446}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Formulas</RootNamespace>
+    <AssemblyName>Formulas</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BracketType.cs" />
+    <Compile Include="Calculation\BaseItem.cs" />
+    <Compile Include="Calculation\Break.cs" />
+    <Compile Include="Calculation\CalculationBuilder.cs" />
+    <Compile Include="Calculation\Condition.cs" />
+    <Compile Include="Calculation\ConditionType.cs" />
+    <Compile Include="Calculation\Continue.cs" />
+    <Compile Include="Calculation\For.cs" />
+    <Compile Include="Calculation\If.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="FileTools.cs" />
+    <Compile Include="FormulaBuilder\FormulaBuilder.cs" />
+    <Compile Include="FormulaBuilder\FormulaBuilderTools.cs" />
+    <Compile Include="FormulaGraphics\BoundaryInfo.cs" />
+    <Compile Include="FormulaGraphics\BracketElement.cs" />
+    <Compile Include="FormulaGraphics\Element.cs" />
+    <Compile Include="FormulaGraphics\Converter.cs" />
+    <Compile Include="FormulaGraphics\EquationBlockElement.cs" />
+    <Compile Include="FormulaGraphics\EquationElement.cs" />
+    <Compile Include="FormulaGraphics\FractionElement.cs" />
+    <Compile Include="FormulaGraphics\FunctionElement.cs" />
+    <Compile Include="FormulaGraphics\IGraphics.cs" />
+    <Compile Include="FormulaGraphics\MtGraphics.cs" />
+    <Compile Include="FormulaGraphics\MultiArgsElement.cs" />
+    <Compile Include="FormulaGraphics\PowElement.cs" />
+    <Compile Include="FormulaGraphics\SqrtElement.cs" />
+    <Compile Include="FormulaGraphics\SumElement.cs" />
+    <Compile Include="FormulaGraphics\SymbolElement.cs" />
+    <Compile Include="FormulaGraphics\UnitElement.cs" />
+    <Compile Include="FormulaGraphics\ValueElement.cs" />
+    <Compile Include="FormulaItems\BracketItem.cs" />
+    <Compile Include="Calculation\CalculationItem.cs" />
+    <Compile Include="Calculation\CalculationItemStack.cs" />
+    <Compile Include="Calculation\Equation.cs" />
+    <Compile Include="Calculation\EquationBlock.cs" />
+    <Compile Include="FormulaItems\FormulaItem.cs" />
+    <Compile Include="FormulaItems\FunctionAbs.cs" />
+    <Compile Include="FormulaItems\FunctionCos.cs" />
+    <Compile Include="FormulaItems\FunctionItem.cs" />
+    <Compile Include="FormulaItems\FunctionPow.cs" />
+    <Compile Include="FormulaItems\FunctionSin.cs" />
+    <Compile Include="FormulaItems\FunctionSqrt.cs" />
+    <Compile Include="FormulaItems\FunctionTan.cs" />
+    <Compile Include="FormulaItems\IFormulaItemVisitor.cs" />
+    <Compile Include="FormulaItems\SymbolItem.cs" />
+    <Compile Include="FormulaItems\SymbolValuePair.cs" />
+    <Compile Include="FormulaItems\UnitItem.cs" />
+    <Compile Include="FormulaItems\ValueItem.cs" />
+    <Compile Include="FormulaTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaTester.Designer.cs">
+      <DependentUpon>FormulaTester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Old\FormulaParser.cs" />
+    <Compile Include="FormulaItems\FunctionMax.cs" />
+    <Compile Include="FormulaItems\FunctionMin.cs" />
+    <Compile Include="FormulaItems\FunctionMultiply.cs" />
+    <Compile Include="FormulaItems\FunctionSum.cs" />
+    <Compile Include="Old\Math.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexTools.cs" />
+    <Compile Include="StringTools.cs" />
+    <Compile Include="TreeViewFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormulaTester.resx">
+      <DependentUpon>FormulaTester.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

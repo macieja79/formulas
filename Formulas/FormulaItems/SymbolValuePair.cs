@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Formulas
+{
+	public class SymbolValuePair
+	{
+		public SymbolItem Symbol { get; set; }
+		public ValueItem Value { get; set; }
+	
+	}
+}
